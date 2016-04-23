@@ -1,0 +1,21 @@
+// items
+{
+	"items":
+		[
+			{
+				"label": "Red Smoothie",
+				"vineyard": "Bobs Wines",
+				"percentage": "18"
+			},
+			{
+				"label": "Purple Haze",
+				"vineyard": "Jimis Grapes Inc.",
+				"percentage": "12" 
+			},
+			{
+				"label": "The Redster",
+				"vineyard": "Plain Wine Inc.",
+				"percentage": "17"
+			}
+		]
+}
