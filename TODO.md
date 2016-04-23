@@ -1,4 +1,4 @@
-Install AngularJS
+Install AngularJS ✓
 
 Views:
 	inventory
@@ -9,4 +9,4 @@ CRUD:
 	R
 	U
 	D
-	per item
+	-"- per item
