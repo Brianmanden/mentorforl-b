@@ -1,0 +1,22 @@
+{
+  "name": "mentorprogram",
+  "homepage": "https://github.com/Brianmanden/mentorprogram",
+  "authors": [
+    "Brian Juul Andersen <brianmanden@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "angularjs#^1.5.5"
+  }
+}
