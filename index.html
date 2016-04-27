@@ -19,9 +19,19 @@
     <script src="public/lib/angular/angular.min.js"></script>
   </head>
   <body>
-    <h1>Wine Cellar</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <h1>Wine Cellar</h1>
+        </div>
+        
+        <div class="row">
+            <h2>Inventory</h2>
+            <winecellar-directive></winecellar-directive>
+        </div>
 
-    <div ng-controller="AppListController">123</div>
+        
+        
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="public/lib/jquery/dist/jquery.min.js"></script>
@@ -29,6 +39,5 @@
     <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="app/app.js"></script>
-    
   </body>
 </html>

@@ -1,36 +1,45 @@
-"user strict";
+var winecellarModule = (function(){
+	"user strict";
 
-var app = angular.module('winecellar', []);
+	var app = angular
+				.module('winecellar', [])
+				.directive('winecellarDirective', winecellarDirective);
 
-app.controller('AppListController', function($scope, $http){
-	$scope.items = null;
+	function winecellarDirective(){
 
-	/*
-	$http.get('http://localhost:8080/mentorprogram/data/items.json')
-		.success(function (data){
-			$scope.item = data.wines;
-		})
-		.error(function( data, status, headers, config){
-			console.log("oh oooh .. something went wrong");
-			
-			console.log("data: ");
-			console.dir(data);
-			
-			console.log("status: ");
-			console.dir(status);
+		var controller = ['$scope', '$http', function($scope, $http){
+			/*
+			function init(){
+			}
+			*/
 
-			console.log("headers:");
-			console.dir(headers);
-			
-			console.log("config: ");
-			console.dir(config);
-		});
-	*/
+			//init();
 
-	$http.get('http://localhost:8080/mentorprogram/data/items.json')
-		.success(function(){
-			console.log("23123132131231111");
-		})
+			$scope.getInv = listInv;
 
-	console.dir($scope);
-});
+			listInv();
+		}];
+
+		function listInv(){
+			console.dir();
+			$http.get('http://localhost:8080/mentorprogram/data/items.json')
+				.success(function (data){
+					$scope.items = data.items;
+				})
+				.error(function( data, status, headers, config){
+					console.log("oh oooh .. something went wrong");
+				});
+		}
+
+		var directive = {
+			controller: controller,
+			getInv: listInv,
+			restrict: 'EA',
+			templateUrl: './templates/listInv.html'
+		};
+
+		return directive;
+
+	}
+
+})();
