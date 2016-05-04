@@ -1,20 +1,22 @@
 {
-	"items":
-		[
-			{
-				"label": "Red Smoothie",
-				"vineyard": "Bobs Wines",
-				"percentage": "18"
-			},
-			{
-				"label": "Purple Haze",
-				"vineyard": "Jimis Grapes Inc.",
-				"percentage": "12" 
-			},
-			{
-				"label": "The Redster",
-				"vineyard": "Plain Wine Inc.",
-				"percentage": "17"
-			}
-		]
+	"items": [
+		{
+			"label": "Red Smoothie",
+			"vineyard": "Bobs Wines",
+			"percentage": "18",
+			"image": "/img/wine01.jpg"
+		},
+		{
+			"label": "Purple Haze",
+			"vineyard": "Jimis Grapes Inc.",
+			"percentage": "12",
+			"image": "/img/wine02.jpg"
+		},
+		{
+			"label": "The Redster",
+			"vineyard": "Plain Wine Inc.",
+			"percentage": "17",
+			"image": "/img/wine03.jpg"
+		}
+	]
 }
