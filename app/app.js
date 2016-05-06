@@ -17,7 +17,6 @@
 			templateUrl: '/components/mentorprogram/templates/inventory.html',
 			controller: ['$scope', function($scope){
 				$scope.items = items;
-				console.dir($scope.items);
 			}],
 			controllerAs: 'winecellar'
 		};
