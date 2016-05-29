@@ -1,12 +1,14 @@
 (function(){
 	'use strict';
-
 	var DataService = function($rootScope, $http){
 
 		var getData = function(dataItemsUrl, callback){
 			return $http.get(dataItemsUrl)
 				.then(function(response){
-					return response.data;
+					//console.dir(response.data.items);
+					
+					$rootScope.items = response.data.items;
+					//return response.data.items;
 				}, logError);
 		};
 
