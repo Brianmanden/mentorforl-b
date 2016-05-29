@@ -12,35 +12,39 @@
 			</ul>
 
 			<div class="tab-content">
+
 				<div id="short{{$index}}" class="tab-pane fade in active">
-					<p>{{item.label}}</p>
-					<p>by {{item.vineyard}}</p>
-					<p>{{item.percentage}}% vol.</p>
+					<b ng-bind="item.label"></b>
+					<p>produced by <b ng-bind="item.vineyard"></b></p>
+					<p><b ng-bind="item.percentage"></b><b>% vol.</b></p>
 				</div>
+
 				<div id="full{{$index}}" class="tab-pane fade">
-					<p>{{item.label}}</p>
-					<p>by {{item.vineyard}}</p>
-					<p>{{item.percentage}}% vol.</p>
-					<p>{{item.comment}}</p>
+					<b ng-bind="item.label"></b>
+					<p>produced by <b ng-bind="item.vineyard"></b></p>
+					<p><b ng-bind="item.percentage"></b><b> % vol.</b></p>
+					<p ng-bind="item.comment"></p>
 				</div>
+
 				<div id="edit{{$index}}" class="tab-pane fade">
 					<div class="form-group">
 						<label for="label">Label:</label>
-						<input type="text" class="form-control" id="label" value="{{item.label}}">
+						<input type="text" class="form-control" id="label" ng-model="item.label">
 					</div>
 					<div class="form-group">
 						<label for="Vineyard">Vineyard:</label>
-						<input type="text" class="form-control" id="Vineyard" value="{{item.vineyard}}">
+						<input type="text" class="form-control" id="Vineyard" ng-model="item.vineyard">
 					</div>
 					<div class="form-group">
 						<label for="percentage">Percentage:</label>
-						<input type="number" step="any" class="form-control" id="percentage" value="{{item.percentage}}">
+						<input type="number" step="any" class="form-control" id="percentage" ng-model="item.percentage">
 					</div>
 					<div class="form-group">
 						<label for="comment">Comment:</label>
-						<textarea class="form-control" rows="5" id="comment">{{item.comment}}</textarea>
+						<textarea class="form-control" rows="5" id="comment" ng-model="item.comment"></textarea>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>

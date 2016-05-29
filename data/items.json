@@ -3,21 +3,21 @@
 		{
 			"label": "Red Smoothie",
 			"vineyard": "Bobs Wines",
-			"percentage": "18",
+			"percentage": 18,
 			"comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus est vitae aliquet mollis. Donec bibendum augue a mauris commodo porta. Sed non lacus odio. Nunc convallis vestibulum justo, vel lobortis sapien tempus sit amet.",
 			"image": "/img/wine01.jpg"
 		},
 		{
 			"label": "Purple Haze",
 			"vineyard": "Jimis Grapes Inc.",
-			"percentage": "12",
+			"percentage": 12,
 			"comment": "Købt hos Jimi´s Fine Wines på Mallorca i 1969.",
 			"image": "/img/wine02.jpg"
 		},
 		{
 			"label": "The Redster",
 			"vineyard": "Plain Wine Inc.",
-			"percentage": "17",
+			"percentage": 17,
 			"comment": "Vestibulum eros magna, hendrerit a dictum vel, rhoncus ut libero. Phasellus rutrum accumsan eleifend. Nulla eget ligula odio. Aliquam nec commodo elit. Nam ut commodo leo.",
 			"image": "/img/wine03.jpg"
 		}
