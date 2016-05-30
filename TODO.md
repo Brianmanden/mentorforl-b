@@ -1,13 +1,12 @@
 Current state:
-	getting $$state object returned instead of an object from dataservice ??
 
 General:
 	Views:
 		inventory
-			get wines (JSON)
-			loop through inventory
+			get wines (JSON) ✓
+			loop through inventory ✓
 		item
-			show details
+			show details ✓
 
 	CRUD:
 		C
