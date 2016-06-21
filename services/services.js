@@ -1,29 +1,28 @@
 (function(){
 	'use strict';
-	var DataService = function($rootScope, $http){
 
-		var getData = function(dataItemsUrl, callback){
-			return $http.get(dataItemsUrl)
-				.then(function(response){
-					//console.dir(response.data.items);
-					
-					$rootScope.items = response.data.items;
-					//return response.data.items;
-				}, logError);
+	function DataService($http){
+		var data = {};
+		this.getData = function(dataItemsUrl){
+			$http({
+				method: 'GET',
+				url: dataItemsUrl
+			}).then(function successCallback(response){
+				console.log('success reading url: ' + dataItemsUrl);
+				angular.extend(data, response.data.items);
+			}, function errorCallback(response){
+				console.log('error: ');
+				console.dir(response);
+			});
+
+			return data;
 		};
 
-		var logError = function(reason){
-			console.log('Danger Will Robinson... danger');
-			console.error(reason);
-		};
-
-		return{
-			getData: getData
-		};
-
-	};
+		return this;
+	}
 
 	angular
-		.module('winecellar')
-		.factory('DataService', DataService);
+	.module('winecellar')
+	.service('DataService', DataService);
+
 })();
