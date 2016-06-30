@@ -24,7 +24,13 @@
 			return{
 				scope: true,
 				restrict: 'E',
-				templateUrl: '/components/mentorprogram/templates/crud.html'
+				templateUrl: '/components/mentorprogram/templates/crud.html',
+				controller: [function(){
+					this.showHide = function(){
+						console.log('virker ??');
+					};
+				}],
+				controllerAs: 'crud'
 			};
 		});
 })();

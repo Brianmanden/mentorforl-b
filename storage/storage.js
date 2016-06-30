@@ -24,7 +24,7 @@
 
 	var insertData = function(){
 		localStorage.put(testWine, onsuccess, onerror);
-	}
+	};
 
 	var onsuccess = function(id){
 		console.log('Item inserted! ID: ' + id);

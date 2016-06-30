@@ -1,13 +1,4 @@
-Current state:
-
 General:
-	Views:
-		inventory
-			get wines (JSON) ✓
-			loop through inventory ✓
-		item
-			show details ✓
-
 	CRUD:
 		C
 		R
@@ -15,15 +6,41 @@ General:
 		D
 		-"- per item
 
-Routing
-CRUD
 API
 	https://api.wine.com/
 
-DB
-	https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
-	Bruge et bibliotek til at håndtere IndexDB
-		https://www.npmjs.com/package/idb
-
-
 Måske lave et par features
+
+
+
+----------------
+Siden sidst:
+----------------
+Brug af RootScope omskrevet til en service
+Splittet op i flere directives
+Lidt extra GUI (virker ikke endnu)
+Local Storage - IDBWrapper
+	kun til offline
+	Have hele DB´en i hukommelsen - gemme løbende til local storage
+
+----------------
+Spørgsmål:
+----------------
+Routing ?
+	Bruge UI-router i stedet for angular-route
+	Hvordan ska det opbygges ?
+		-Views- Components !
+
+Rydde op i libraries ?
+
+----------------
+Næste gang
+----------------
+Omskrive til Angular components
+	https://docs.angularjs.org/guide/component
+	
+	https://www.youtube.com/watch?v=AMwjDibFxno
+	
+	Talk om components
+	
+	https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.vqzo3cy8m
