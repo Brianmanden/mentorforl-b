@@ -7,19 +7,24 @@
     <title>Wine Cellar</title>
     <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/styles/style.css">
-    <script src="public/lib/angular/angular.min.js"></script>
   </head>
   <body>
+    
     <div class="container-fluid">
         <div class="row">
             <h1>Wine Cellar</h1>
         </div>
-        <winecellar-directive ng-init="winecellar.initList()"></winecellar-directive>
+        <winecellar-directive></winecellar-directive>
     </div>
+
+    <script src="public/lib/angular/angular.min.js"></script>
     <script src="public/lib/jquery/dist/jquery.min.js"></script>
     <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app/app.js"></script>
     <script src="services/services.js"></script>
     <script src="directives/directives.js"></script>
+    <script src="public/lib/angular-route/angular-route.js"></script>
+    <script src="public/lib/idbwrapper/idbstore.js"></script>
+    <script src="storage/storage.js"></script>
   </body>
 </html>

@@ -21,8 +21,13 @@
 		return this;
 	}
 
+	function ApiService($http){
+		// service to query API at wine.com
+	}
+
 	angular
 	.module('winecellar')
-	.service('DataService', DataService);
+	.service('DataService', DataService)
+	.service('ApiService', ApiService);
 
 })();

@@ -1,0 +1,19 @@
+{
+  "name": "mentorprogram",
+  "version": "1.0.0",
+  "description": "Mentor program\r Coding a wine cellar app in AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brianmanden/mentorprogram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brianmanden/mentorprogram/issues"
+  },
+  "homepage": "https://github.com/Brianmanden/mentorprogram#readme"
+}
