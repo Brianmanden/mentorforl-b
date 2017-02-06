@@ -1,4 +1,4 @@
-General:
+Generelt:
 	CRUD:
 		C
 		R
@@ -9,9 +9,9 @@ General:
 API
 	https://api.wine.com/
 
-Måske lave et par features
-
-
+Features:
+	search.html:
+		Mouseover ("Add >") på resultater fra wine.com
 
 ----------------
 Siden sidst:

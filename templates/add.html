@@ -1,0 +1,28 @@
+<div class="caption">
+	<h3>Add wine</h3>
+</div>
+
+<div class="col-sm-6 col-md-6">
+	<div class="form-group">
+		<label for="label">Label:</label>
+		<input type="text" class="form-control" id="label" ng-model="item.label">
+	</div>
+	<div class="form-group">
+		<label for="vineyard">Vineyard:</label>
+		<input type="text" class="form-control" id="vineyard" ng-model="item.vineyard">
+	</div>
+	<div class="form-group">
+		<label for="percentage">Percentage:</label>
+		<input type="number" step="any" class="form-control" id="percentage" ng-model="item.percentage">
+	</div>
+</div>
+	
+<div class="col-sm-6 col-md-6">
+	<div class="form-group">
+		<label for="comment">Comment:</label>
+		<textarea class="form-control" rows="6" id="comment" ng-model="item.comment"></textarea>
+	</div>
+	<div class="form-group">
+		<button class="pull-right" ng-click="crud.addWine()">Add wine</button>
+	</div>
+</div>
