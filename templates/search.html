@@ -1,11 +1,20 @@
 <div class="caption">
 	<h3>Search wine</h3>
+	
+	<div class="input-group">
+		<label class="radio-inline">
+			<input checked type="radio" name="dataSource"/>Search <img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" />
+		</label>
+		<label class="radio-inline">
+			<input type="radio" name="dataSource" /><span>Seach APP</span>
+		</label>
+	</div>
 </div>
 
 <div class="col-sm-6 col-md-6">
 	<div class="form-group">
 		<label for="search">Search:</label>
-		<input type="text" class="form-control" id="search">
+		<input ng-model="searchQuery" type="text" class="form-control" id="search">
 	</div>
 
 	<div class="form-group">
@@ -33,6 +42,7 @@
 			<li class="list-group-item">Porta ac consectetur ac<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
 			<li class="list-group-item">Vestibulum at eros<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
 		</ul>
-		<a class="pull-right" href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a>
 	</div>
+	
+	<a class="pull-right" href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a>
 </div>

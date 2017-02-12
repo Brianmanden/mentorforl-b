@@ -32,7 +32,6 @@
 					this.addWine = function($event){
 						console.log($event);
 						//DataService.postData($scope.item);
-						
 						/*
 							comment: "-4-"
 							label: "-1-"
@@ -49,7 +48,7 @@
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/search.html',
-				controller: ['$scope', function($scope){
+				controller: ['$scope', 'ApiService', function($scope, ApiService){
 					this.addWine = function($event){
 						const wineData = $event.currentTarget.dataset;
 						const wineInfo = document.querySelectorAll('add-directive .form-control');
@@ -59,7 +58,7 @@
 						wineInfo[2].value = wineData.percentage;
 					};
 					this.searchWine = function(){
-						console.log('seach wine.com');
+						ApiService.search($scope.searchQuery);
 					};
 				}],
 				controllerAs: 'search'
