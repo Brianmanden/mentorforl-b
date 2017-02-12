@@ -5,3 +5,13 @@
 	width: 80px;
 	height: 20px;
 }
+.list-group li .toggle{
+	display: none;
+}
+.list-group li:hover .toggle{
+	display: block
+}
+#searchResults{
+	max-height: 250px;
+	overflow-y: auto;
+}

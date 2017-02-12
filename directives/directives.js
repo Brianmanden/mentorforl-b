@@ -29,8 +29,9 @@
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/crud.html',
 				controller: ['$scope', 'DataService', function($scope, DataService){
-					this.addWine = function(){
-						DataService.postData($scope.item);
+					this.addWine = function($event){
+						console.log($event);
+						//DataService.postData($scope.item);
 						
 						/*
 							comment: "-4-"
@@ -49,9 +50,17 @@
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/search.html',
 				controller: ['$scope', function($scope){
+					this.addWine = function($event){
+						const wineData = $event.currentTarget.dataset;
+						const wineInfo = document.querySelectorAll('add-directive .form-control');
+						
+						wineInfo[0].value = wineData.label;
+						wineInfo[1].value = wineData.vineyard;
+						wineInfo[2].value = wineData.percentage;
+					};
 					this.searchWine = function(){
 						console.log('seach wine.com');
-					}
+					};
 				}],
 				controllerAs: 'search'
 			};
@@ -61,7 +70,9 @@
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/add.html',
-				controller: [],
+				controller: ['$scope', function(){
+					
+				}],
 				controllerAs: 'add'
 			};
 		});

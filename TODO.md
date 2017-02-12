@@ -26,12 +26,7 @@ Local Storage - IDBWrapper
 ----------------
 Spørgsmål:
 ----------------
-Routing ?
-	Bruge UI-router i stedet for angular-route
-	Hvordan ska det opbygges ?
-		-Views- Components !
-
-Rydde op i libraries ?
+Extra mark-up i search.html (hover over LI´er)- hvordan kan det undgåes ?
 
 ----------------
 Næste gang
