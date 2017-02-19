@@ -9,7 +9,13 @@
 	display: none;
 }
 .list-group li:hover .toggle{
-	display: block
+	display: block;
+	width; 10%;
+}
+
+.list-group-item p{
+	display: inline-block;
+	width: 80%;
 }
 #searchResults{
 	max-height: 250px;

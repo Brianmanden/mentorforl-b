@@ -1,4 +1,6 @@
+----------------
 Generelt:
+----------------
 	CRUD:
 		C
 		R
@@ -6,12 +8,17 @@ Generelt:
 		D
 		-"- per item
 
-API
-	https://api.wine.com/
+	API
+		https://api.wine.com/
+			Der er hul igennem
+			Ved fejl i query (eks. forkert apiKey) returnerer wine.com status = 200 & data.Status.ReturnCode = 300
+				Hvordan kan man håndtere det ?
 
-Features:
-	search.html:
-		Mouseover ("Add >") på resultater fra wine.com
+	Features:
+		search.html:
+			Mouseover ("Add >") på resultater fra wine.com
+			Søgning ved tryk på enter
+
 
 ----------------
 Siden sidst:
@@ -23,10 +30,12 @@ Local Storage - IDBWrapper
 	kun til offline
 	Have hele DB´en i hukommelsen - gemme løbende til local storage
 
+
 ----------------
 Spørgsmål:
 ----------------
 Extra mark-up i search.html (hover over LI´er)- hvordan kan det undgåes ?
+
 
 ----------------
 Næste gang

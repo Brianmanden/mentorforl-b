@@ -43,27 +43,30 @@
 				controllerAs: 'crud'
 			};
 		})
-		.directive('searchDirective', function(){
+		.directive('searchDirective', ['ApiService', function(){
 			return{
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/search.html',
 				controller: ['$scope', 'ApiService', function($scope, ApiService){
+					
 					this.addWine = function($event){
 						const wineData = $event.currentTarget.dataset;
 						const wineInfo = document.querySelectorAll('add-directive .form-control');
 						
-						wineInfo[0].value = wineData.label;
+						wineInfo[0].value = wineData.name;
 						wineInfo[1].value = wineData.vineyard;
 						wineInfo[2].value = wineData.percentage;
 					};
 					this.searchWine = function(){
-						ApiService.search($scope.searchQuery);
+						ApiService.search($scope.searchQuery).then(function(result){
+							$scope.result = result;
+						});
 					};
 				}],
 				controllerAs: 'search'
 			};
-		})
+		}])
 		.directive('addDirective', function(){
 			return{
 				scope: true,

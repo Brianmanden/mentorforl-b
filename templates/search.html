@@ -19,34 +19,15 @@
 
 	<div class="form-group">
 		<button class="pull-right" ng-click="search.searchWine()">Search</button>
-		<!--
-		<button ng-click="search.test()">Test</button>
-		-->
-		<br />
-		<br />
-		<br />
 	</div>
 </div>
 
 <div class="col-sm-6 col-md-6">
 	<div class="form-group">
 		<label for="searchResults">Results</label>
+		<p ng-hide="result">No results.</p>
 		<ul id="searchResults" class="list-group">
-			<li class="list-group-item">Cras justo odio<span ng-click="search.addWine($event)" class="pull-right toggle" data-label="thing1" data-vineyard="qweqwe" data-percentage="8">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Dapibus ac facilisis in<span ng-click="search.addWine($event)" class="pull-right toggle" data-label="thing2" data-vineyard="eeeeeeewwww" data-percentage="7">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Morbi leo risus<span class="pull-right toggle" data-label="thing3" data-vineyard="qweee" data-percentage="5">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Porta ac consectetur ac<span class="pull-right toggle" data-label="thing4" data-vineyard="qwe" data-percentage="4">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Vestibulum at eros<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Cras justo odio<span ng-click="search.addWine($event)" class="pull-right toggle" data-test="thing1">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Dapibus ac facilisis in<span ng-click="search.addWine($event)" class="pull-right toggle" data-test="thing2">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Morbi leo risus<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Porta ac consectetur ac<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Vestibulum at eros<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Cras justo odio<span ng-click="search.addWine($event)" class="pull-right toggle" data-test="thing1">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Dapibus ac facilisis in<span ng-click="search.addWine($event)" class="pull-right toggle" data-test="thing2">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Morbi leo risus<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Porta ac consectetur ac<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
-			<li class="list-group-item">Vestibulum at eros<span class="pull-right toggle">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
+			<li ng-repeat="item in result" class="list-group-item"><p>{{item.name}} - {{item.vineyard}}</p><span ng-click="search.addWine($event)" class="pull-right toggle" data-name="{{item.name}}" data-vineyard="{{item.vineyard}}" data-percentage="8">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
 		</ul>
 	</div>
 	
