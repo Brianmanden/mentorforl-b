@@ -22,7 +22,7 @@ Generelt:
 ----------------
 Siden sidst:
 ----------------
-	$http omskrevet til 
+	$http omskrevet til promises i begge services
 
 
 ----------------
@@ -35,7 +35,6 @@ Kommunikation mellem directives ?
 Ved fejl i query (eks. forkert apiKey) returnerer wine.com status = 200 & data.Status.ReturnCode = 300
 	Hvordan bør man håndtere det ?
 	API´et burde vel returnere en fejlkode i stedet for 200 ?
-	Skrive om til at returnere et promise i stedet for HTTP.
 
 ----------------
 Næste gang
@@ -55,4 +54,3 @@ Omskrive til Angular components
 	Talk om components
 	
 	https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.vqzo3cy8m
-

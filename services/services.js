@@ -5,17 +5,16 @@
 	function LocalStorageService($http, $q){
 		var data = {};
 		this.getData = function(dataItemsUrl){
-			
 			// instantiate promise
-			var deferred = $q.defer();
-			
+			var deferred = $q.defer();			
 			// access local storage
+
 			$http.get(dataItemsUrl)
-			.success(function(response){
+			.then(function(response){
 				console.log('Success accessing local storage: ' + dataItemsUrl);
-				deferred.resolve(data);
-			})
-			.error(function(msg, code){
+				console.dir(response.data.items);
+				deferred.resolve(response.data.items);
+			}, function(msg, code){
 				console.log('Failed accessing local storage');
 				console.log('Message: ', msg);
 				console.log('Code: ', code);
@@ -48,7 +47,7 @@
 
 			// query API endpoint
 			$http.get(url)
-			.success(function(response){
+			.then(function(response){
 				console.log('Success querying API');
 				const result = response.Products.List.map( item => {
 					return {
@@ -57,12 +56,11 @@
 					};
 				});
 				deferred.resolve(result);
-			})
-			.error(function(msg, code){
+			}, function(msg, code){
 				console.log('Failed querying API');
 				console.log('Message: ', msg);
 				console.log('Code: ', code);
-				deferred.reject(msg);
+				deferred.reject(msg);				
 			});
 			
 			// return promise

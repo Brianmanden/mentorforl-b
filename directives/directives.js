@@ -24,7 +24,7 @@
 						LocalStorageService.updateData(dataItem);
 					}
 				}],
-				controllerAs: 'inventory'
+				controllerAs: 'inventory'			
 			};
 		})
 		.directive('crudDirective', function(){
