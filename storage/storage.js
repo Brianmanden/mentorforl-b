@@ -2,6 +2,7 @@
 	'use strict';
 
 	var now = Date();
+
 	var testWine = {
 		label: 'testLabel',
 		vineyard: 'testVineyard',

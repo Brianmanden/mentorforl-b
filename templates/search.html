@@ -27,7 +27,20 @@
 		<label for="searchResults">Results</label>
 		<p ng-hide="result">No results.</p>
 		<ul id="searchResults" class="list-group">
-			<li ng-repeat="item in result" class="list-group-item"><p>{{item.name}} - {{item.vineyard}}</p><span ng-click="search.addWine($event)" class="pull-right toggle" data-name="{{item.name}}" data-vineyard="{{item.vineyard}}" data-percentage="8">Add<i class="glyphicon glyphicon-menu-right"></i></span></li>
+			<li 
+				ng-repeat="item in result"
+				class="list-group-item">
+				<p>{{item.name}} - {{item.vineyard}}</p>
+				<span
+					ng-click="search.addWine($event)"
+					class="pull-right toggle"
+					data-name="{{item.name}}"
+					data-vineyard="{{item.vineyard}}"
+					data-percentage="8">
+					Add
+					<i class="glyphicon glyphicon-menu-right"></i>
+				</span>
+			</li>
 		</ul>
 	</div>
 	

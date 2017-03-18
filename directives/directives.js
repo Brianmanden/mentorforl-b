@@ -14,10 +14,10 @@
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/inventory.html',
-				controller: ['$rootScope', 'DataService', function($rootScope, DataService){
-					this.items = DataService.getData('data/items.json');
+				controller: ['$rootScope', 'LocalStorageService', function($rootScope, LocalStorageService){
+					this.items = LocalStorageService.getData('data/items.json');
 					this.updateWine = function(dataItem){
-						DataService.updateData(dataItem);
+						LocalStorageService.updateData(dataItem);
 					}
 				}],
 				controllerAs: 'inventory'
@@ -28,10 +28,10 @@
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/crud.html',
-				controller: ['$scope', 'DataService', function($scope, DataService){
+				controller: ['$scope', 'LocalStorageService', function($scope, LocalStorageService){
 					this.addWine = function($event){
-						console.log($event);
-						//DataService.postData($scope.item);
+						//console.log($event);
+						//LocalStorageService.postData($scope.item);
 						/*
 							comment: "-4-"
 							label: "-1-"
@@ -51,16 +51,23 @@
 				controller: ['$scope', 'ApiService', function($scope, ApiService){
 					
 					this.addWine = function($event){
+						//console.log($scope);
+						//console.log(item);
+						
 						const wineData = $event.currentTarget.dataset;
 						const wineInfo = document.querySelectorAll('add-directive .form-control');
 						
+						// Bør håndteres gennem parent scope, service eller ??
 						wineInfo[0].value = wineData.name;
 						wineInfo[1].value = wineData.vineyard;
 						wineInfo[2].value = wineData.percentage;
+						
 					};
 					this.searchWine = function(){
-						ApiService.search($scope.searchQuery).then(function(result){
-							$scope.result = result;
+						ApiService.search($scope.searchQuery)
+						.then(function(data){
+							$scope.result = data;
+							console.dir($scope.result);
 						});
 					};
 				}],

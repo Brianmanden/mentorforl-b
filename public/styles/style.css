@@ -9,6 +9,7 @@
 	display: none;
 }
 .list-group li:hover .toggle{
+	cursor: pointer;
 	display: block;
 	width; 10%;
 }
