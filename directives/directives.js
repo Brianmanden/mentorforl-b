@@ -15,7 +15,11 @@
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/inventory.html',
 				controller: ['$rootScope', 'LocalStorageService', function($rootScope, LocalStorageService){
-					this.items = LocalStorageService.getData('data/items.json');
+					var _this = this;
+					LocalStorageService.getData('data/items.json')
+					.then(function(data){
+						_this.items = data;
+					});
 					this.updateWine = function(dataItem){
 						LocalStorageService.updateData(dataItem);
 					}

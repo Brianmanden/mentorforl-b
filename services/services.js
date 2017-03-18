@@ -1,22 +1,29 @@
 (function(){
 	'use strict';
 
-	// Service for communicating with local storage
-	function LocalStorageService($http){
+	// Service for accessing local storage
+	function LocalStorageService($http, $q){
 		var data = {};
 		this.getData = function(dataItemsUrl){
-			$http({
-				method: 'GET',
-				url: dataItemsUrl
-			}).then(function successCallback(response){
-				console.log('Success reading url: ' + dataItemsUrl);
-				angular.extend(data, response.data.items);
-			}, function errorCallback(response){
-				console.log('Error: ');
-				console.dir(response);
+			
+			// instantiate promise
+			var deferred = $q.defer();
+			
+			// access local storage
+			$http.get(dataItemsUrl)
+			.success(function(response){
+				console.log('Success accessing local storage: ' + dataItemsUrl);
+				deferred.resolve(data);
+			})
+			.error(function(msg, code){
+				console.log('Failed accessing local storage');
+				console.log('Message: ', msg);
+				console.log('Code: ', code);
+				deferred.reject(msg);
 			});
-
-			return data;
+			
+			// return promise
+			return deferred.promise;
 		};
 		this.postData = function(dataItem){
 			// label, vineyard, percentage, comment
@@ -32,15 +39,17 @@
 	// Service for communicating with wine.com
 	function ApiService($http, $q){
 		this.search = function(searhQuery){
+			// params
 			const apiKey = '69e1be8a5b4125e0920fe60d73e490a4';
 			const url = 'http://services.wine.com/api/beta2/service.svc/JSON/catalog?apikey=' + apiKey + '&size=25&offset=10&term=' + searhQuery;
 			
+			// instantiate promise
 			var deferred = $q.defer();
 
+			// query API endpoint
 			$http.get(url)
 			.success(function(response){
 				console.log('Success querying API');
-
 				const result = response.Products.List.map( item => {
 					return {
 						name: item.Name,
@@ -56,30 +65,8 @@
 				deferred.reject(msg);
 			});
 			
+			// return promise
 			return deferred.promise;
-			
-			/*
-			return $http({
-				method: 'GET',
-				url: url
-			}).then(function successCallback(response){
-				console.log('Success querying API');
-				//console.log(url);
-				console.log(response.data.Products.List[0]);
-				
-				const result = response.data.Products.List.map( item => {
-					return {
-						name: item.Name,
-						vineyard: item.Vineyard.Name
-					};
-				});
-
-				return result;
-			}, function errorCallback(response){
-				console.log('Error: ');
-				console.dir(response);
-			});
-			*/
 		}
 	}
 	

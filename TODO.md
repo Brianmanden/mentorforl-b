@@ -22,12 +22,7 @@ Generelt:
 ----------------
 Siden sidst:
 ----------------
-Brug af RootScope omskrevet til en service
-Splittet op i flere directives
-Lidt extra GUI (virker ikke endnu)
-Local Storage - IDBWrapper ✓
-	kun til offline
-	Have hele DB´en i hukommelsen - gemme løbende til local storage
+	$http omskrevet til 
 
 
 ----------------
