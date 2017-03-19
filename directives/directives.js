@@ -71,7 +71,6 @@
 						ApiService.search($scope.searchQuery)
 						.then(function(data){
 							$scope.result = data;
-							console.dir($scope.result);
 						});
 					};
 				}],

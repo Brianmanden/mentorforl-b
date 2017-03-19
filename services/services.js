@@ -12,7 +12,6 @@
 			$http.get(dataItemsUrl)
 			.then(function(response){
 				console.log('Success accessing local storage: ' + dataItemsUrl);
-				console.dir(response.data.items);
 				deferred.resolve(response.data.items);
 			}, function(msg, code){
 				console.log('Failed accessing local storage');
@@ -49,7 +48,7 @@
 			$http.get(url)
 			.then(function(response){
 				console.log('Success querying API');
-				const result = response.Products.List.map( item => {
+				const result = response.data.Products.List.map( item => {
 					return {
 						name: item.Name,
 						vineyard: item.Vineyard.Name

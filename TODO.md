@@ -19,6 +19,15 @@ Generelt:
 		add.html:
 			Sætte værdier med datamodel i stedet for html attributter
 
+			
+
+----------------			
+HERTIL:
+----------------
+https://ui-router.github.io/
+	
+	
+	
 ----------------
 Siden sidst:
 ----------------
