@@ -11,14 +11,18 @@ Generelt:
 	Omskrive til flere views
 	Begynde at bruge UI-routing istedet for angular-route.
 
-	Features:
+	Features / bugs:
+		HERTIL!!!
+		Thumbnail + caption i sit eget view der så får værdier tildelt.
+	
 		search.html:
 			Søgning ved tryk på enter
 			Spinner ved ventetid
 			
 		add.html:
 			Sætte værdier med datamodel i stedet for html attributter
-
+		
+		ADD > fixe styles 
 			
 
 ----------------			
@@ -37,6 +41,13 @@ Siden sidst:
 ----------------
 Spørgsmål:
 ----------------
+UI Router
+	Views erstatte directives .. eller ?
+		Pros/cons
+		http://stackoverflow.com/questions/22790209/angular-ui-router-ui-views-vs-directives
+		
+Knap/search virker ikke i mindre viewport ?? 
+
 Kommunikation mellem directives ?
 	Gennem en service, parent controller/scope eller noget tredje ?
 	Bruge service pga. decoupling.

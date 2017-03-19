@@ -11,9 +11,17 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<h1>Wine Cellar</h1>
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-header pull-right">
+						<a class="navbar-brand" ui-sref="inventory">Winecellar App</a>
+					</div>
+					<ul class="nav nav-pills pull-left">
+						<li><a ui-sref="inventory">Home</a></li>
+						<li><a ui-sref="crud">Search</a></li>
+					</ul>
+				</nav>
 			</div>
-			<winecellar-directive></winecellar-directive>
+			<div class="row" ui-view></div>
 		</div>
 		<script src="public/lib/angular/angular.min.js"></script>
 		<script src="public/lib/angular-ui-router/release/angular-ui-router.js"></script>

@@ -22,3 +22,7 @@
 	max-height: 250px;
 	overflow-y: auto;
 }
+
+.navbar-fixed-top{
+	padding: 10px;
+}
