@@ -1,56 +1,51 @@
-<div class="thumbnail">
-	<div class="caption">
-		<br>
-		<br>
-		<br>
-	</div>
-	<div class="row caption">
-		<h3>Search wine</h3>
-		<div class="col-sm-4 col-md-4">
-			<div class="input-group">
-				<label class="radio-inline">
-					<input checked type="radio" name="dataSource"/>Search <img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" />
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="dataSource" /><span>Seach APP</span>
-				</label>
-			</div>
+<div class="row caption">
+	<div class="col-sm-4 col-md-4">
+		<div class="input-group">
+			<label class="radio-inline">
+				<input checked type="radio" name="dataSource"/>Search <img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" />
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="dataSource" /><span>Seach APP</span>
+			</label>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div class="form-group">
-				<label for="search">Search:</label>
-				<input ng-model="searchQuery" type="text" class="form-control" id="search">
-			</div>
-
-			<div class="form-group">
-				<button class="pull-right" ng-click="search.searchWine()">Search</button>
-			</div>
-		</div>
-	</div>
+</div>
+<div class="row">
 	<div class="col-sm-6 col-md-6">
 		<div class="form-group">
-			<label for="searchResults">Results:</label>
-			<p ng-hide="result">No results.</p>
-			<ul id="searchResults" class="list-group">
-				<li 
-					ng-repeat="item in result"
-					class="list-group-item">
-					<p>{{item.name}} - {{item.vineyard}}</p>
-					<span
-						ng-click="search.addWine($event)"
-						class="pull-right toggle"
-						data-name="{{item.name}}"
-						data-vineyard="{{item.vineyard}}"
-						data-percentage="8">
-						Add
-						<i class="glyphicon glyphicon-menu-right"></i>
-					</span>
-				</li>
-			</ul>
+			<label for="search">Search:</label>
+			<input ng-model="searchQuery" type="text" class="form-control" id="search">
 		</div>
-		
-		<a class="pull-right" href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a>
+
+		<div class="form-group">
+			<button class="pull-right" ng-click="search.searchWine()">Search</button>
+		</div>
 	</div>
+</div>
+<div class="col-sm-6 col-md-6">
+	<div class="form-group">
+		<label for="searchResults">Results:</label>
+		<p ng-hide="result">No results.</p>
+		<ul id="searchResults" class="list-group">
+			<li 
+				ng-repeat="item in result"
+				class="list-group-item">
+				<p>{{item.name}} - {{item.vineyard}}</p>
+				<span>
+					<!--
+					ng-click="search.addWine($event)"
+					class="pull-right toggle"
+					data-name="{{item.name}}"
+					data-vineyard="{{item.vineyard}}"
+					data-percentage="8">
+					-->
+					<a ui-sref="add({ item: item })">Add</a>
+					<i class="glyphicon glyphicon-menu-right"></i>
+				</span>
+				
+			</li>
+		</ul>
+	</div>
+	
+	<a class="pull-right" href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img class="wineCom" src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a>
 </div>

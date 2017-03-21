@@ -18,9 +18,6 @@ Generelt:
 			
 		add.html:
 			Sætte værdier med datamodel i stedet for html attributter
-		
-		ADD > fixe styles 
-			
 
 ----------------			
 HERTIL:
@@ -37,7 +34,7 @@ Siden sidst:
 
 
 ----------------
-Spørgsmål/bugs:
+Spørgsmål:
 ----------------
 UI Router
 	Views erstatte directives .. eller ?

@@ -14,7 +14,6 @@
 					'headline': { template: "Inventory"	},
 					'content': {
 						template: "<inventory-directive>"
-						//controller: function($scope){ ... }
 					}
 				}
 			})
@@ -25,6 +24,23 @@
 					'content': {
 						template: "<search-directive>"
 					}
+				}
+			})
+			.state('add', {
+				url: '/add',
+				views: {
+					'headline': { template: "Add wine"},
+					'content': {
+						template: "<add-directive>",
+						controller: function($scope, $stateParams){
+							console.dir($stateParams.item);
+							$scope.item = $stateParams.item;
+						}
+					}
+				},
+				params: {
+					item: null,
+					squash: true
 				}
 			});
 		})

@@ -24,7 +24,7 @@
 						LocalStorageService.updateData(dataItem);
 					}
 				}],
-				controllerAs: 'inventory'			
+				controllerAs: 'inventory'
 			};
 		})
 		.directive('searchDirective', ['ApiService', function(){
@@ -32,7 +32,9 @@
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/search.html',
-				controller: ['$scope', 'ApiService', function($scope, ApiService){
+				controller: ['$scope', 'ApiService', function($scope, ApiService){					
+					/*
+						Object sendes nu som parameter til view´et istedet for gennem
 					this.addWine = function($event){
 						const wineData = $event.currentTarget.dataset;
 						const wineInfo = document.querySelectorAll('add-directive .form-control');
@@ -40,6 +42,7 @@
 						wineInfo[1].value = wineData.vineyard;
 						wineInfo[2].value = wineData.percentage;
 					};
+					*/
 					this.searchWine = function(){
 						ApiService.search($scope.searchQuery)
 						.then(function(data){
