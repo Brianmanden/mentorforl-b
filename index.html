@@ -17,11 +17,15 @@
 					</div>
 					<ul class="nav nav-pills pull-left">
 						<li><a ui-sref="inventory">Home</a></li>
-						<li><a ui-sref="crud">Search</a></li>
+						<li><a ui-sref="search">Search</a></li>
 					</ul>
 				</nav>
 			</div>
-			<div class="row" ui-view></div>
+			<div class="row headline">
+					<h3 ui-view="headline"></h3>
+			</div>
+			<div class="row content" ui-view="content"></div>
+
 		</div>
 		<script src="public/lib/angular/angular.min.js"></script>
 		<script src="public/lib/angular-ui-router/release/angular-ui-router.js"></script>

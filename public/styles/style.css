@@ -1,3 +1,16 @@
+.red{
+	outline: 1px solid red;
+}
+
+.container-fluid{
+	padding-right: 35px;
+	padding-left: 35px;
+}
+
+.headline{
+	margin-top: 70px;
+}
+
 .thumbnail a>img, .thumbnail>img{
 	height: 150px;
 }

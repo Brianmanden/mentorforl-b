@@ -10,11 +10,22 @@
 			$stateProvider
 			.state('inventory', {
 				url: '/home',
-				template: "<inventory-directive>"
+				views: {
+					'headline': { template: "Inventory"	},
+					'content': {
+						template: "<inventory-directive>"
+						//controller: function($scope){ ... }
+					}
+				}
 			})
-			.state('crud', {
-				url: '/crud',
-				template: "<crud-directive>"
+			.state('search', {
+				url: '/search',
+				views: {
+					'headline': { template: "Search" },
+					'content': {
+						template: "<search-directive>"
+					}
+				}
 			});
 		})
 		.run(function($rootScope){

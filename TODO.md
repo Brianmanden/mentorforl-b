@@ -11,10 +11,7 @@ Generelt:
 	Omskrive til flere views
 	Begynde at bruge UI-routing istedet for angular-route.
 
-	Features / bugs:
-		HERTIL!!!
-		Thumbnail + caption i sit eget view der så får værdier tildelt.
-	
+	Features / bugs:	
 		search.html:
 			Søgning ved tryk på enter
 			Spinner ved ventetid
@@ -29,8 +26,9 @@ Generelt:
 HERTIL:
 ----------------
 https://ui-router.github.io/
-	
-	
+https://scotch.io/tutorials/angular-routing-using-ui-router
+
+Thumbnail + caption i sit eget view der så får værdier tildelt.
 	
 ----------------
 Siden sidst:
@@ -39,12 +37,14 @@ Siden sidst:
 
 
 ----------------
-Spørgsmål:
+Spørgsmål/bugs:
 ----------------
 UI Router
 	Views erstatte directives .. eller ?
 		Pros/cons
 		http://stackoverflow.com/questions/22790209/angular-ui-router-ui-views-vs-directives
+		
+	"inline controllers" ? Best practise ?
 		
 Knap/search virker ikke i mindre viewport ?? 
 

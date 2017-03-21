@@ -27,45 +27,18 @@
 				controllerAs: 'inventory'			
 			};
 		})
-		.directive('crudDirective', function(){
-			return{
-				scope: true,
-				restrict: 'E',
-				templateUrl: '/components/mentorprogram/templates/crud.html',
-				controller: ['$scope', 'LocalStorageService', function($scope, LocalStorageService){
-					this.addWine = function($event){
-						//console.log($event);
-						//LocalStorageService.postData($scope.item);
-						/*
-							comment: "-4-"
-							label: "-1-"
-							percentage: 123
-							vineyard: "-2-"
-						*/
-					};
-				}],
-				controllerAs: 'crud'
-			};
-		})
 		.directive('searchDirective', ['ApiService', function(){
 			return{
 				scope: true,
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/search.html',
 				controller: ['$scope', 'ApiService', function($scope, ApiService){
-					
 					this.addWine = function($event){
-						//console.log($scope);
-						//console.log(item);
-						
 						const wineData = $event.currentTarget.dataset;
 						const wineInfo = document.querySelectorAll('add-directive .form-control');
-						
-						// Bør håndteres gennem parent scope, service eller ??
 						wineInfo[0].value = wineData.name;
 						wineInfo[1].value = wineData.vineyard;
 						wineInfo[2].value = wineData.percentage;
-						
 					};
 					this.searchWine = function(){
 						ApiService.search($scope.searchQuery)
@@ -83,7 +56,7 @@
 				restrict: 'E',
 				templateUrl: '/components/mentorprogram/templates/add.html',
 				controller: ['$scope', function(){
-					
+
 				}],
 				controllerAs: 'add'
 			};
